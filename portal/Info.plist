@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_BASE_URL</key>
+	<string>$(API_URL_SCHEME)://$(API_URL_HOST)</string>
+	<key>APP_NAMESPACE</key>
+	<string>$(APP_NAMESPACE)</string>
+	<key>CLIENT_ID</key>
+	<string>$(CLIENT_ID)</string>
+	<key>CLIENT_SCOPE</key>
+	<string>$(CLIENT_SCOPE)</string>
+	<key>CLIENT_SECRET</key>
+	<string>$(CLIENT_SECRET)</string>
+	<key>SENTRY_DSN</key>
+	<string>$(SENTRY_DSN)</string>
+	<key>SENTRY_ENV</key>
+	<string>$(SENTRY_ENV)</string>
+</dict>
+</plist>

@@ -1,0 +1,26 @@
+//  
+//  Production.xcconfig
+//  portal
+//
+//  Created by Michael de Guzman on 8/16/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_URL_SCHEME=https
+API_URL_HOST=production.url.ph/api
+APP_NAMESPACE=$(PRODUCT_BUNDLE_IDENTIFIER).production
+
+SENTRY_DSN=value
+SENTRY_ENV=production
+
+CLIENT_ID=value
+CLIENT_SECRET=value
+CLIENT_SCOPE=*
+
+FB_APP_ID=value
+FB_APP_DISPLAY_NAME=value
+
+GOOGLE_CLIENT_ID=value
+GOOGLE_SERVER_CLIENT_ID=value
