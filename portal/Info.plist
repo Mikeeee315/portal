@@ -12,6 +12,14 @@
 	<string>$(CLIENT_SCOPE)</string>
 	<key>CLIENT_SECRET</key>
 	<string>$(CLIENT_SECRET)</string>
+	<key>MSAL_AUTHORITY</key>
+	<string>$(MSAL_AUTHORITY)</string>
+	<key>MSAL_CLIENT_ID</key>
+	<string>$(MSAL_CLIENT_ID)</string>
+	<key>MSAL_GRAPH_ENDPOINT</key>
+	<string>$(MSAL_GRAPH_ENDPOINT)</string>
+	<key>MSAL_REDIRECT_URI</key>
+	<string>$(MSAL_REDIRECT_URI)</string>
 	<key>SENTRY_DSN</key>
 	<string>$(SENTRY_DSN)</string>
 	<key>SENTRY_ENV</key>

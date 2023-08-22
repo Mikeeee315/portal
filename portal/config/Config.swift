@@ -22,6 +22,10 @@ struct Config: Decodable {
 	var clientId: String
     var clientSecret: String
     var clientScope: String
+	var msalClientID: String
+	var	msalGraphEndpoint: String
+	var	msalAuthority: String
+	var msalRedirectURI: String
 	
 	enum CodingKeys: String, CodingKey {
 		case baseURL = "API_BASE_URL"
@@ -33,6 +37,11 @@ struct Config: Decodable {
         case clientId = "CLIENT_ID"
         case clientSecret = "CLIENT_SECRET"
         case clientScope = "CLIENT_SCOPE"
+		
+		case msalClientID = "MSAL_CLIENT_ID"
+		case msalGraphEndpoint = "MSAL_GRAPH_ENDPOINT"
+		case msalAuthority = "MSAL_AUTHORITY"
+		case msalRedirectURI = "MSAL_REDIRECT_URI"
 	}
 
 }

@@ -8,6 +8,7 @@
 import UIKit
 import Sentry
 import IQKeyboardManager
+import MSAL
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
 		initSentry()
-
+		
+		initMSAL()
 //		initFirebase(application: application)
 
 		Config.shared.showInfo()
@@ -73,6 +75,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
 	  print("Unable to register for remote notifications: \(error.localizedDescription)")
+	}
+	
+	func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+		
+		return MSALPublicClientApplication.handleMSALResponse(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
 	}
 
 
@@ -132,4 +139,27 @@ extension AppDelegate {
         IQKeyboardManager.shared().isEnabled = true
     }
 
+}
+
+extension AppDelegate {
+	func initMSAL() {
+		// The MSAL Logger should be set as early as possible in the app launch sequence, before any MSAL
+		// requests are made.
+		
+		MSALGlobalConfig.loggerConfig.setLogCallback { (logLevel, message, containsPII) in
+			
+			// If PiiLoggingEnabled is set YES, this block will potentially contain sensitive information (Personally Identifiable Information), but not all messages will contain it.
+			// containsPII == YES indicates if a particular message contains PII.
+			// You might want to capture PII only in debug builds, or only if you take necessary actions to handle PII properly according to legal requirements of the region
+			if let displayableMessage = message {
+				if (!containsPII) {
+					#if DEBUG
+					// NB! This sample uses print just for testing purposes
+					// You should only ever log to NSLog in debug mode to prevent leaking potentially sensitive information
+					print(displayableMessage)
+					#endif
+				}
+			}
+		}
+	}
 }

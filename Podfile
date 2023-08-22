@@ -7,6 +7,9 @@ target 'portal' do
   use_frameworks!
 
   # Pods for portal
+  
+  #MSAL
+  pod 'MSAL'
 
   # Notifications
   pod 'Firebase/Messaging'

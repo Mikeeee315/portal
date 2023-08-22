@@ -56,6 +56,9 @@ PODS:
   - Moya/RxSwift (15.0.0):
     - Moya/Core
     - RxSwift (~> 6.0)
+  - MSAL (1.2.5):
+    - MSAL/app-lib (= 1.2.5)
+  - MSAL/app-lib (1.2.5)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -85,6 +88,7 @@ DEPENDENCIES:
   - Kingfisher (~> 4.10.0)
   - MBProgressHUD
   - Moya/RxSwift
+  - MSAL
   - PopupDialog
   - RxCocoa
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `8.8.0`)
@@ -106,6 +110,7 @@ SPEC REPOS:
     - Kingfisher
     - MBProgressHUD
     - Moya
+    - MSAL
     - nanopb
     - PopupDialog
     - PromisesObjC
@@ -140,6 +145,7 @@ SPEC CHECKSUMS:
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  MSAL: 5149daaa19228c2c27d81987634da15b50981cef
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
@@ -150,6 +156,6 @@ SPEC CHECKSUMS:
   SentryPrivate: 4350d865f898224ab9fa02b37d6ee7fbb623f47e
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 3b2fa19f41d6ec60057b9756baa4fff2e9910d73
+PODFILE CHECKSUM: de91474eada0ef0a7581983c06c71abff2738904
 
 COCOAPODS: 1.12.1

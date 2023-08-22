@@ -24,3 +24,8 @@ FB_APP_DISPLAY_NAME=value
 
 GOOGLE_CLIENT_ID=value
 GOOGLE_SERVER_CLIENT_ID=value
+
+MSAL_CLIENT_ID="9302047e-b3ce-4f16-8fdc-3e120ebc4e06"
+MSAL_GRAPH_ENDPOINT="https://graph.microsoft.com/"
+MSAL_AUTHORITY="https://login.microsoftonline.com/20f103e2-16ca-422d-a4e8-3c82fb6af14d"
+MSAL_REDIRECT_URI="msauth.com.microsoft.identitysample.MSALiOS://auth"
